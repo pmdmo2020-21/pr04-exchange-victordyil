@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">Exchange</string>
+    <string name="initialValue">0</string>
+    <string name="result">%.2f %s = %.2f %s</string>
+    <string name="dollar">Dollar</string>
+    <string name="euro">Euro</string>
+    <string name="pound">Pound</string>
+    <string name="to_currency">To currency</string>
+    <string name="from_currency">From currency</string>
+    <string name="amount">Amount</string>
+    <string name="currencyimage">CurrencyImage</string>
 </resources>
