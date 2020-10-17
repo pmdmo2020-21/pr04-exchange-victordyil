@@ -19,6 +19,7 @@
         android:layout_margin="@dimen/margin"
         android:inputType="numberDecimal"
         android:text="@string/initialValue"
+        android:selectAllOnFocus="true"
         android:textAlignment="textEnd"
         android:imeOptions="actionDone"
         android:maxLength="10"/>

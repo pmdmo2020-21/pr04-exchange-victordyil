@@ -22,14 +22,14 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun setupViews() {
-        binding.lblAmount.selectAll()
         listenToMe()
         binding.lblAmount.setOnEditorActionListener { v, actionId, event ->
             if (actionId == EditorInfo.IME_ACTION_DONE && !binding.lblAmount.text.endsWith(".")) {
                 change()
                 hideSoftKeyboard(binding.lblAmount)
                 true
-            } else {
+            }
+            else {
                 false
             }
         }
