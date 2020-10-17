@@ -21,7 +21,7 @@
         android:text="@string/initialValue"
         android:textAlignment="textEnd"
         android:imeOptions="actionDone"
-        android:importantForAutofill="no" />
+        android:maxLength="10"/>
 
     <TextView
         android:layout_width="match_parent"
@@ -53,6 +53,7 @@
             android:text="@string/euro" />
 
         <RadioButton
+            android:enabled="false"
             android:id="@+id/FPound"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -91,6 +92,7 @@
         android:orientation="horizontal">
 
         <RadioButton
+            android:enabled="false"
             android:id="@+id/TDolar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

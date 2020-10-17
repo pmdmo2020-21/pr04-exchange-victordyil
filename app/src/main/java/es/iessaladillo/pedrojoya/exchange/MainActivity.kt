@@ -157,16 +157,30 @@ class MainActivity : AppCompatActivity() {
                 }
             }
             binding.FEuro.id -> {
+                symbol1 = Currency.EURO.symbol
                 when (binding.TRadioButtom.checkedRadioButtonId) {
-                    binding.TDolar.id -> Currency.EURO.toDollar(amount)
-                    binding.TPound.id -> Currency.POUND.fromDollar(Currency.EURO.toDollar(amount))
+                    binding.TDolar.id -> {
+                        symbol2 = Currency.DOLLAR.symbol
+                        Currency.EURO.toDollar(amount)
+                    }
+                    binding.TPound.id -> {
+                        symbol2 = Currency.POUND.symbol
+                        Currency.POUND.fromDollar(Currency.EURO.toDollar(amount))
+                    }
                     else -> 0.00
                 }
             }
             binding.FPound.id -> {
+                symbol1 = Currency.POUND.symbol
                 when (binding.TRadioButtom.checkedRadioButtonId) {
-                    binding.TDolar.id -> Currency.POUND.toDollar(amount)
-                    binding.TEuro.id -> Currency.EURO.fromDollar(Currency.POUND.toDollar(amount))
+                    binding.TDolar.id ->{
+                        symbol2=Currency.DOLLAR.symbol
+                        Currency.POUND.toDollar(amount)
+                    }
+                    binding.TEuro.id -> {
+                        symbol2 = Currency.EURO.symbol
+                        Currency.EURO.fromDollar(Currency.POUND.toDollar(amount))
+                    }
                     else -> 0.00
                 }
             }
