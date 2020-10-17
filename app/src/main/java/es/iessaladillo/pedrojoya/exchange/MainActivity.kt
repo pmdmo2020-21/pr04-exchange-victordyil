@@ -80,7 +80,10 @@ class MainActivity : AppCompatActivity() {
                 checkedId
             )
         }
-        binding.button.setOnClickListener { if (!binding.lblAmount.text.endsWith(".")) change() }
+        binding.button.setOnClickListener { if (!binding.lblAmount.text.endsWith(".")){
+            change()
+            hideSoftKeyboard(binding.lblAmount)
+        } }
 
     }
 
